@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-// import 'modern-normalize';
 
 export const GlobalStyle = styled.div`
+  width: 100%;
+
   h1,
   h2,
   h3,
@@ -19,14 +20,4 @@ export const GlobalStyle = styled.div`
     max-width: 100%;
     height: auto;
   }
-`;
-
-export const LIST_DIV = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  margin: 30px;
-  width: 300px;
 `;
