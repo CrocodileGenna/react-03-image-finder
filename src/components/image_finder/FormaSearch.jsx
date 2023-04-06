@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FORM, BUTTON, INPUT } from './styled/FormaSearch.styled';
 
 export class FormaSearch extends Component {
   state = {
@@ -18,7 +19,7 @@ export class FormaSearch extends Component {
     if (this.state.search.trim() === '') {
       return toast.info('Введіть пошуковий запит', {
         position: 'bottom-right',
-        autoClose: 5000,
+        autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -34,11 +35,11 @@ export class FormaSearch extends Component {
 
   render() {
     return (
-      <form onSubmit={this.hendleSubmit} autoComplete="off">
-        <button>Search</button>
-        <input type="text" name="search" onChange={this.hendleValue} />
+      <FORM onSubmit={this.hendleSubmit} autoComplete="off">
+        <BUTTON>Search</BUTTON>
+        <INPUT type="text" name="search" onChange={this.hendleValue} />
         <ToastContainer />
-      </form>
+      </FORM>
     );
   }
 }

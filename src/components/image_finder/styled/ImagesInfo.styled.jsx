@@ -5,50 +5,42 @@ export const CONTAINER_UL = styled.ul`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 50px 0 0 0;
+    padding: 70px 0 0 0;
 }
 `;
 
-export const CARD_LI = styled.li`
-  position: relative;
+export const SPIN = styled.div`
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #000000;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: 
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    } 
+    1s linear infinite;
+`;
+
+export const BUTTON = styled.button`  
   display: flex;
-  width: 250px;
-  margin: 15px;
+  padding: 11px 40px;
+  border: none;
   border-radius: 5px;
+  margin: 60px auto 100px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
   transition: all 0.4s ease 0s;
 
   :hover,
   :focus {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 10px;
+    color: black;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px black;
   }
-`;
-
-export const IMG = styled.img`
-  width: 100%;
-  border-radius: 5px;
-`;
-
-export const INFO_DIV = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-  color: #00000000;
-  background-color: #00000000;
-
-  :hover,
-  :focus {
-    background-color: #000000e0;
-    p {
-      color: green;
-    }
-    span {
-      color: #fff;
-    }
-  }
+}
 `;
